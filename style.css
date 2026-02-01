@@ -2,9 +2,7 @@ body
 {
   background: #1a1e23;
   margin: 0;
-}
-
-
+}
 .bg-video 
 {
   position: fixed;
@@ -24,8 +22,7 @@ body
   top: 40%;
   font-size: 2em;
   font-family: Arial, sans-serif;
-}
-
+}
 .calculator
 {
     box-shadow:0 15px 35px rgba(0 ,0, 0, 0.5);
@@ -116,13 +113,12 @@ header
     border-radius: 15px;
     padding:5px;
 }
- h1 
+h1 
 {
     color:white;
     font-family: delius, algerian;
     transition: transform 0.5s ease-in-out; 
-}
-
+}
 header h1:hover 
 {
   transform: translateX(780px); 

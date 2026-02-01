@@ -1,50 +1,54 @@
-let string = "";
+let string = '';
 let buttons = document.querySelectorAll(".keys");
 Array.from(buttons).forEach((keys) => {
     keys.addEventListener("click", (e) => {
-        if (e.target) 
+        let val= e.target.innerText;
+        if(val == '=')
         {
-            val= e.target.innerHTML;
-            if(val== "=")
-                {
-                    string= eval(string);
-                    string= string+ val;
-                    document.querySelector("input").value= string;
-                }
-                else
-                {
-                    console.log(val);
-                    string= string + val;
-                    document.querySelector("input").value= string;
-                }
-            if(val!="DEL"&&val!="AC"&&val!="="&&val!="%")
-            {
-                console.log(val);
-                // if(val=="+")
-                // {
-                //     string = string + "+";
-                //     document.querySelector("input").value = string;
-                // }
-                string = string + val;
-                document.querySelector("input").value = string;
-            }
-            if(val=="AC")
-            {
-                string = "";
-                document.querySelector("input").value = string;
-            }
-            if(val=="DEL")
-            {
-                string = string.slice(0,-1);
-                document.querySelector("input").value = string;
-            }
-            
-                
-                
-
-
-
-
+            string= eval(string);
+            document.querySelector(".count").value= string;
         }
+        else
+        {
+            switch(val) 
+            {
+                case 'AC':
+                    string = "";
+                    document.querySelector(".count").value = string;
+                    break;
+                case 'DEL':
+                    string = string.substring(0, string.length - 1);
+                    document.querySelector(".count").value = string;
+                    break;
+                case '.':
+                    string += '.';
+                    document.querySelector(".count").value = string;
+                    break;
+                case '%':
+                    string += '/100';
+                    document.querySelector(".count").value = string;
+                    break;
+                case '*':
+                    string += '*';
+                    document.querySelector(".count").value = string;
+                    break;
+                case '/':
+                    string += '/';
+                    document.querySelector(".count").value = string;
+                    break;
+                case '+':
+                    string += '+';
+                    document.querySelector(".count").value = string;
+                    break;
+                case '-':
+                    string += '-';
+                    document.querySelector(".count").value = string;
+                    break;
+                default:
+                    string += val;
+                    document.querySelector(".count").value = string;
+                    console.log(val);
+            }
+        }          
     });
 });

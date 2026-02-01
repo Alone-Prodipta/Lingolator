@@ -113,14 +113,17 @@ header
     box-shadow:0 15px 35px rgba(0 ,0, 0, 0.5);
     border:1px solid rgba(255,255,255,0.07);
     backdrop-filter: blur(10px);
+    border-radius: 15px;
     padding:5px;
 }
-header h1 {
- color:white;
-  font-family: delius, algerian;
-  transition: transform 0.5s ease; 
+ h1 
+{
+    color:white;
+    font-family: delius, algerian;
+    transition: transform 0.5s ease-in-out; 
 }
 
-header h1:hover {
+header h1:hover 
+{
   transform: translateX(780px); 
 }

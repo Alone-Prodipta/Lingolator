@@ -21,31 +21,31 @@ Array.from(buttons).forEach((keys) => {
                     document.querySelector(".count").value = string;
                     break;
                 case '.':
-                    string += '.';
+                    string = string + '.';
                     document.querySelector(".count").value = string;
                     break;
                 case '%':
-                    string += '/100';
+                    string = string + '/100';
                     document.querySelector(".count").value = string;
                     break;
                 case '*':
-                    string += '*';
+                    string = string + '*';
                     document.querySelector(".count").value = string;
                     break;
                 case '/':
-                    string += '/';
+                    string = string + '/';
                     document.querySelector(".count").value = string;
                     break;
                 case '+':
-                    string += '+';
+                    string = string + '+';
                     document.querySelector(".count").value = string;
                     break;
                 case '-':
-                    string += '-';
+                    string = string + '-';
                     document.querySelector(".count").value = string;
                     break;
                 default:
-                    string += val;
+                    string = string + val;
                     document.querySelector(".count").value = string;
                     console.log(val);
             }

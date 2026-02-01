@@ -1,29 +1,30 @@
-body {
+body 
+{
   background: #1a1e23;
   margin: 0;
 }
 
 
-    .bg-video {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover; 
-      z-index: -1; 
-    }
+.bg-video 
+{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; 
+  z-index: -1; 
+}
 
-    
-    .content {
-      position: relative;
-      z-index: 1;
-      color: white;
-      text-align: center;
-      top: 40%;
-      font-size: 2em;
-      font-family: Arial, sans-serif;
-    }
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 40%;
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+}
 
 .calculator
 {
@@ -109,6 +110,18 @@ input::placeholder
 }
 header
 {
-  background-color: red;
-  padding:5px;
+    box-shadow:0 15px 35px rgba(0 ,0, 0, 0.5);
+    border:1px solid rgba(255,255,255,0.07);
+    backdrop-filter: blur(10px);
+    padding:5px;
+}
+h1
+{
+    color:white;
+    font-family: delius, algerian;
+    transition: transform 0.5s ease; /* smooth animation */
+}
+h1:hover 
+{
+  transform: translateX(780px); /* moves 30px to the right */
 }
